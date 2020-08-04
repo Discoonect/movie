@@ -1,5 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
+dotenv.config({ path: "./config/config.env" });
+
 const morgan = require("morgan");
 const movie = require("./route/movie");
 const user = require("./route/user");
@@ -7,8 +9,6 @@ const reply = require("./route/reply");
 const reserve = require("./route/reserve");
 const fileupload = require("express-fileupload");
 const path = require("path");
-
-dotenv.config({ path: "./config/config.env" });
 
 const app = express();
 app.use(express.json());
